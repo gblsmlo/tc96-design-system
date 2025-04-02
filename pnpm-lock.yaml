@@ -78,6 +78,9 @@ importers:
       '@storybook/test':
         specifier: ^8.6.11
         version: 8.6.11(storybook@8.6.11)
+      '@tc96/biome-config':
+        specifier: ^1.1.1
+        version: 1.1.1(@biomejs/biome@1.9.4)
       '@types/node':
         specifier: ^22.13.17
         version: 22.13.17
@@ -1199,6 +1202,11 @@ packages:
     resolution: {integrity: sha512-tFTkRZwXq4XKr3S2dUZBxy80wbWYHdDSsu4QOB1yE1HJFKjfxKVpXtup4dyTVdQcLInoHC9lZXFPHnjoBP774g==}
     peerDependencies:
       vite: ^5.2.0 || ^6
+
+  '@tc96/biome-config@1.1.1':
+    resolution: {integrity: sha512-CO8JpmdHziJdm1IFrZPVzQU5ugy48lJiHXvwLSra6C1ETooyf/tCFu2ZAKHpwZevwA40WHHF2hJNu4gd7Rkk5A==}
+    peerDependencies:
+      '@biomejs/biome': 1.9.4
 
   '@testing-library/dom@10.4.0':
     resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
@@ -3500,6 +3508,10 @@ snapshots:
       '@tailwindcss/oxide': 4.1.1
       tailwindcss: 4.1.1
       vite: 6.2.4(@types/node@22.13.17)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+
+  '@tc96/biome-config@1.1.1(@biomejs/biome@1.9.4)':
+    dependencies:
+      '@biomejs/biome': 1.9.4
 
   '@testing-library/dom@10.4.0':
     dependencies:
