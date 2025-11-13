@@ -1,81 +1,77 @@
 {
-	"name": "@tc96/ui-react",
-	"private": false,
-	"version": "0.1.2",
-	"files": [
-		"dist"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"sideEffects": false,
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.js",
-			"default": "./dist/index.mjs"
-		},
-		"./styles.css": "./dist/styles/index.css"
-	},
-	"scripts": {
-		"dev": "storybook dev -p 6006",
-		"build": "tsup",
-		"build:storybook": "storybook build",
-		"lint": "biome check .",
-		"lint:fix": "biome check . --write",
-		"lint:staged": "biome check . --staged --write",
-		"lint:ci": "biome ci",
-		"serve": "vite preview",
-		"prepare": "husky",
-		"test:ci": "echo 'No error found'",
-		"check:type": "tsc --noEmit",
-		"check:updates": "npm-check-updates -i --color"
-	},
-	"dependencies": {
-		"@radix-ui/react-avatar": "^1.1.11",
-		"@radix-ui/react-slot": "^1.2.4",
-		"@tailwindcss/vite": "^4.1.17",
-		"class-variance-authority": "^0.7.1",
-		"clsx": "^2.1.1",
-		"lucide-react": "^0.552.0",
-		"tailwind-merge": "^3.4.0",
-		"tailwindcss": "^4.1.17",
-		"tailwindcss-animate": "^1.0.7"
-	},
-	"peerDependencies": {
-		"react": ">=19",
-		"react-dom": ">=19"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.3.4",
-		"@chromatic-com/storybook": "^4.1.2",
-		"@commitlint/cli": "20.1.0",
-		"@commitlint/config-conventional": "20.0.0",
-		"@storybook/addon-essentials": "^8.6.14",
-		"@storybook/addon-links": "^8.6.14",
-		"@storybook/addon-interactions": "^8.6.14",
-		"@storybook/addon-onboarding": "^8.6.14",
-		"@storybook/addon-themes": "^8.6.14",
-		"@storybook/blocks": "^8.6.14",
-		"@storybook/react": "^8.6.14",
-		"@storybook/react-vite": "^8.6.14",
-		"@storybook/test": "^8.6.14",
-		"@tc96/biome-config": "^2.2.0",
-		"@types/node": "^24.10.1",
-		"@types/react": "^19.2.4",
-		"@types/react-dom": "^19.2.3",
-		"@vitejs/plugin-react": "^5.1.1",
-		"autoprefixer": "^10.4.22",
-		"globals": "^16.5.0",
-		"husky": "9.1.7",
-		"npm-check-updates": "^19.1.2",
-		"storybook": "^8.6.14",
-		"tsup": "^8.5.1",
-		"typescript": "~5.9.3",
-		"vite": "^7.2.2"
-	}
+  "name": "@tc96/ui-react",
+  "private": false,
+  "version": "0.1.2",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    },
+    "./styles.css": "./dist/styles/index.css"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "tsup",
+    "build:storybook": "storybook build",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "lint:staged": "biome check . --staged --write",
+    "lint:ci": "biome ci",
+    "serve": "vite preview",
+    "prepare": "husky",
+    "test:ci": "echo 'No error found'",
+    "check:type": "tsc --noEmit",
+    "check:updates": "npm-check-updates -i --color"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@tailwindcss/vite": "^4.1.17",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.552.0",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.17",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.4",
+    "@chromatic-com/storybook": "^4.1.2",
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
+    "@storybook/addon-links": "^10.0.7",
+    "@storybook/addon-onboarding": "^10.0.7",
+    "@storybook/addon-themes": "^10.0.7",
+    "@storybook/react-vite": "^10.0.7",
+    "@tc96/biome-config": "^2.2.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.22",
+    "globals": "^16.5.0",
+    "husky": "9.1.7",
+    "npm-check-updates": "^19.1.2",
+    "storybook": "^10.0.7",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2",
+    "@storybook/addon-docs": "^10.0.7"
+  }
 }
