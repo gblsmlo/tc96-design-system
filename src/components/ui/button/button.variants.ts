@@ -3,7 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 export type ButtonProps = VariantProps<typeof buttonVariants>
 
 export const buttonVariants = cva(
-	'inline-flex items-center justify-center gap-2 transition-color ease-linear duration-75 whitespace-nowrap rounded-sm text-sm font-semibold disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*="size-"])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0',
+	'inline-flex items-center justify-center gap-2 transition-color ease-linear duration-75 whitespace-nowrap rounded-sm text-sm font-semibold disabled:pointer-events-none disabled:bg-slate-300 disabled:border-slate-300 disabled:text-slate-500 [&_svg]:pointer-events-none [&_svg:not([class*="size-"])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0',
 	{
 		defaultVariants: {
 			size: 'base',
@@ -12,7 +12,6 @@ export const buttonVariants = cva(
 		variants: {
 			size: {
 				base: 'h-10 px-4 py-2 has-[>svg]:px-3',
-				icon: 'size-9',
 				lg: 'h-12 rounded-md px-6 has-[>svg]:px-4',
 				sm: 'h-8 rounded-md px-3 has-[>svg]:px-2.5',
 			},

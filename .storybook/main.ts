@@ -4,7 +4,12 @@ const config: StorybookConfig = {
 	stories: [
 		'../src/stories/*.stories.@(js|jsx|mjs|ts|tsx)',
 	],
-	addons: ['@storybook/addon-themes', '@storybook/addon-docs'],
+	addons: [
+		'@storybook/addon-actions',
+		'@storybook/addon-themes',
+		'@storybook/addon-docs',
+		'@storybook/addon-vitest',
+	],
 	framework: {
 		name: '@storybook/react-vite',
 		options: {},
