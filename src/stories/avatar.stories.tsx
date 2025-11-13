@@ -1,13 +1,14 @@
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar'
-
 const meta = {
-	title: 'Components/Avatar',
+	args: {
+		onClick: fn(),
+	},
 	component: Avatar,
 	tags: ['autodocs'],
-	args: { onClick: fn() },
+	title: 'Components/Avatar',
 } satisfies Meta<typeof Avatar>
 
 export default meta
@@ -16,7 +17,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
 	render: () => (
 		<Avatar>
-			<AvatarImage src="https://github.com/gabrielmelo.png" alt="@shadcn" />
+			<AvatarImage alt="@shadcn" src="https://github.com/gabrielmelo.png" />
 			<AvatarFallback>GM</AvatarFallback>
 		</Avatar>
 	),
