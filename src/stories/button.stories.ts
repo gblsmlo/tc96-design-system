@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { expect, fn, within } from '@storybook/test'
 
 const meta = {
 	args: { onClick: fn() },
@@ -44,5 +44,23 @@ export const Link: Story = {
 	args: {
 		children: 'Link',
 		variant: 'link',
+	},
+}
+
+export const Disabled: Story = {
+	args: {
+		'aria-disabled': 'true',
+		children: 'Disabled',
+		disabled: true,
+		variant: 'solid',
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+
+		const button = canvas.getByRole('button')
+
+		await expect(button).toBeDisabled()
+		await expect(button).toHaveAttribute('disabled')
+		await expect(button).toHaveAttribute('aria-disabled', 'true')
 	},
 }
