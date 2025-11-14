@@ -1,1 +1,98 @@
-# tc⚡96 ui-react
+# tc⚡96 - React component library
+
+A modern, accessible React component library for product teams. Built on Tailwind CSS v4, Radix UI primitives, and class-variance-authority, and distributed as `@tc96/ui-react`.
+
+## Overview
+- Consistent, themeable UI components powered by Tailwind v4 tokens (OKLCH).
+- Accessible by default using Radix UI primitives and a11y testing via Storybook.
+- Typed variants with CVA for predictable APIs and great DX.
+- Dual ESM/CJS builds via tsup, tree-shakeable, and type-safe.
+
+## Tech Stack
+- React 19 + TypeScript
+- Tailwind CSS v4 (CSS v4 `@theme`, `@plugin`, `@apply`)
+- Radix UI primitives
+- class-variance-authority (CVA)
+- Storybook 10 for docs and interaction tests
+- tsup for builds, Biome for linting
+
+## Goals
+- Reliability: stable, versioned components with changelog.
+- Accessibility: meet WCAG AA where applicable; a11y checks in Storybook.
+- Theming: first-class token support using OKLCH and Tailwind v4.
+- Ergonomics: simple, composable APIs with typed variants and sensible defaults.
+
+## Installation (Consumers)
+Install the package in your app:
+
+```sh
+pnpm add @tc96/ui-react
+# or
+npm install @tc96/ui-react
+# or
+yarn add @tc96/ui-react
+```
+
+Import the styles once (recommended in your app entry):
+
+```ts
+// app entry (e.g., src/main.tsx)
+import '@tc96/ui-react/dist/styles/index.css'
+```
+
+Use components in your app:
+
+```tsx
+import { Button } from '@tc96/ui-react'
+
+export default function Example() {
+  return <Button variant="solid" size="base">Click me</Button>
+}
+```
+
+## Local Development (Contributors)
+Prerequisites: Node 18+ (recommended 22), pnpm.
+
+```sh
+pnpm install
+
+# Storybook (dev)
+pnpm dev
+
+# Type check
+pnpm check:type
+
+# Lint & fix
+pnpm lint:fix
+
+# Build library
+pnpm build
+
+# Build Storybook static
+pnpm build:storybook
+```
+
+Project structure highlights:
+- `src/components/ui/<component>/` — component and its CVA variants
+- `src/stories/` — Storybook stories with interaction tests
+- `src/styles/index.css` — Tailwind v4 tokens and theme
+- `dist/` — build output (ESM, CJS, types, styles)
+
+## Components
+- Button: variants and sizes for primary actions.
+- IconButton: compact button for icon-only actions.
+- Input: text input with size variants and a11y states.
+
+Explore stories via `pnpm dev`.
+
+## Contributing & Issues
+- Found a bug or have a request? Open an issue:
+  - https://github.com/gblsmlo/tc96-design-system/issues
+- Pull Requests are welcome. Please run `pnpm check:type` and `pnpm lint:fix` before submitting.
+
+## Versioning & Releases
+- Semantic Versioning (SemVer). See `CHANGELOG.md` for details.
+- Package name: `@tc96/ui-react`.
+
+## License
+This repository’s license will be clarified in a future update. Until then, please open an issue for questions about usage.

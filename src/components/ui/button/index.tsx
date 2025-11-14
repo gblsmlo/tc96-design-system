@@ -1,6 +1,5 @@
-import { cn } from '@/lib/cn'
+import { cn } from '@/libs/utils'
 import { Slot } from '@radix-ui/react-slot'
-
 import { type ButtonProps, buttonVariants } from './button.variants'
 
 export function Button({
@@ -17,8 +16,8 @@ export function Button({
 
 	return (
 		<Component
+			className={cn(buttonVariants({ className, size, variant }))}
 			data-slot="button"
-			className={cn(buttonVariants({ variant, size, className }))}
 			{...props}
 		/>
 	)

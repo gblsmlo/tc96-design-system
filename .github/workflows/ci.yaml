@@ -9,6 +9,8 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+      STORYBOOK_DISABLE_TELEMETRY: '1'
     strategy:
       matrix:
         node-version: [ 22 ]
@@ -32,11 +34,26 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install Playwright (Chromium only)
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Verify Playwright install
+        run: |
+          pnpm exec playwright --version
+          echo "Playwright cache contents:"
+          ls -la "$HOME/.cache/ms-playwright" || true
+
       - name: Linting
         run: pnpm lint:ci
 
       - name: Type Checking
-        run: pnpm type-check
+        run: pnpm check:type
+
+      - name: Build Library
+        run: pnpm build
 
       - name: Tests
         run: pnpm test:ci
+
+      - name: Build Storybook
+        run: pnpm build:storybook
