@@ -23,6 +23,11 @@ const preview: Preview = {
 			defaultTheme: 'dark',
 		}),
 	],
+	initialGlobals: {
+    a11y: {
+      manual: false,
+    },
+  },
 }
 
 export default preview
