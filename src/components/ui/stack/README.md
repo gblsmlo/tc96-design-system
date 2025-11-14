@@ -205,7 +205,7 @@ Stack is a presentational component and does not alter document outline or headi
 | `space` | `'sm' \| 'base' \| 'lg' \| 'xl'` | `'base'` | Vertical spacing between children |
 | `align` | `'start' \| 'center' \| 'end' \| 'stretch'` | `'stretch'` | Horizontal alignment of children |
 | `justify` | `'start' \| 'center' \| 'end' \| 'between' \| 'around' \| 'evenly'` | `'start'` | Vertical justification of children |
-| `as` | `'div' \| 'section' \| 'ul' \| 'ol'` | `'div'` | HTML element to render |
+| `as` | `'div' \| 'section'` | `'div'` | HTML element to render |
 | `className` | `string` | `undefined` | Additional CSS classes to apply |
 
 The component also accepts all standard HTML attributes for the chosen element.
