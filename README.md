@@ -46,7 +46,7 @@ Use components in your app:
 import { Button } from '@tc96/ui-react'
 
 export default function Example() {
-	return <Button variant="solid" size="base">Click me</Button>
+  return <Button variant="solid" size="base">Click me</Button>
 }
 ```
 
@@ -87,7 +87,7 @@ Explore stories via `pnpm dev`.
 
 ## Contributing & Issues
 - Found a bug or have a request? Open an issue:
-	- https://github.com/gblsmlo/tc96-design-system/issues
+  - https://github.com/gblsmlo/tc96-design-system/issues
 - Pull Requests are welcome. Please run `pnpm check:type` and `pnpm lint:fix` before submitting.
 
 ## Versioning & Releases
