@@ -19,6 +19,4 @@ const badgeVariants = cva(
 	},
 )
 
-type BadgeProps = VariantProps<typeof badgeVariants>
-
-export { badgeVariants, type BadgeProps }
+export { badgeVariants }
