@@ -11,17 +11,12 @@ export type TextProps = ComponentPropsWithoutRef<'p'> &
 		as?: TextElement
 	}
 
-export const Text = forwardRef<HTMLParagraphElement, TextProps>(
-	({ className, size, as, ...props }, ref) => {
+export const Text = forwardRef<HTMLParagraphElement | HTMLSpanElement, TextProps>(
+	({ className, size, as, ...props }) => {
 		const Component: ElementType = as || 'p'
 
 		return (
-			<Component
-				className={cn(textVariants({ size }), className)}
-				data-slot="text"
-				ref={ref}
-				{...props}
-			/>
+			<Component className={cn(textVariants({ size }), className)} data-slot="text" {...props} />
 		)
 	},
 )
