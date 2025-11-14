@@ -39,9 +39,9 @@ Controls which HTML text element is rendered. Defaults to `p`.
 The `size` prop controls the text size:
 
 - **`sm`** - Small text (text-sm, 14px)
-- **`base`** (default) - Base text (text-base, 16px)
+- **`base`** Base text (text-base, 16px)
 - **`lg`** - Large text (text-lg, 18px)
-- **`xl`** - Extra large text (text-2xl, 24px)
+- **`xl`** - Extra large text (text-xl, 20px)
 
 ### Examples
 
