@@ -11,7 +11,7 @@ export type InlineProps = ComponentPropsWithoutRef<'div'> &
 		as?: InlineElement
 	}
 
-export const Inline = forwardRef<HTMLElement, InlineProps>(
+export const Inline = forwardRef<HTMLDivElement, InlineProps>(
 	({ className, space, align, justify, wrap, as, ...props }) => {
 		const Component: ElementType = as || 'div'
 
